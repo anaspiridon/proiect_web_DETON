@@ -40,9 +40,8 @@ self.location='calendar.php?month=' + month_val + '&year=' + year_val ; // reia 
 
             <li> <a href="#">Obiecte permise la vizita</a></li>
             <li> <a href="#">Obiecte nepermise la vizita </a></li>
-             <li class="nav-item"><a href="login.php">Log out</a></li>
-            
         </ul>
+        <li class="nav-item"><a href="login.php">Log out</a></li>
     </li>
  
     
@@ -63,7 +62,7 @@ a completa formularul.  Ca urmare a intrarii in vigoare a Deciziei 470/13.06.201
  
 <li>Intervalul de timp dintre momentul solicitarii unei programari și momentul acordarii efective a vizitei nu poate fi mai mare de 5 zile.</li>
 </h2></ol><br><br>
-
+<h2>Programul vizitelor: zilnic intre orele 9:00-10:30 si 14:00-15:00</h2><br>
 
 
 
@@ -155,8 +154,8 @@ echo "<center><a href=calendar.php>Reset Calendar</a></center>";
 <div>
     <a href="#close" title="Close" class="close">X</a>
     <h2>Programare online</h2> <br><br>
-    <p> Pentru programarea unei vizite va rugam sa completati acest formular cu datele dumneavoastra
-    din buletin. <br> <br>Daca doriti sa vizitati un detinut cu un vizitator ce si-a creat cont va rugam sa introduceti username-ul vizitatorului. </p><br>
+     <h3>Pentru programarea unei vizite va rugam sa completati acest formular cu datele dumneavoastra
+    din buletin. <br> <br>Daca doriti sa vizitati un detinut cu un vizitator ce si-a creat cont va rugam sa introduceti username-ul vizitatorului. </h3><br>
 
     
 
@@ -178,12 +177,41 @@ echo "<center><a href=calendar.php>Reset Calendar</a></center>";
 <label for="username" >Username vizitator invitat:</label><br>
   <input type="username" name="username" placeholder="Username-ul prietenului tau...">
   <br><br>
+  <label for="adresa" >Intervalul orar:</label><br>
+<select>
 
+  <option value="1interv">9:00-10:30</option>
+  <option value="2interv">14:00-15:00</option>
+
+</select>
+<br><br><br>
   <p> 
   <button> Trimite </button>
 
   </div>
   </form>
+</div>
+</div>
+
+</div>
+
+ <div id="openModal2" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Programare online</h2><br><br>
+    <h3>Va multumim!</h3><br>
+    <p><strong>Veti primi confirmarea vizitei prin email!</strong></p>
+    
+</div>
+
+
+</div>
+
+</body>
+</html>
+
+</body>
+</html>
 </div>
 </div>
 
