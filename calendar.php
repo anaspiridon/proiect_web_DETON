@@ -24,83 +24,45 @@ var year_val=document.getElementById('year').value;      // colecteaza anii
 self.location='calendar.php?month=' + month_val + '&year=' + year_val ; // reia pagina
 }
 
-
 </script>
-<style type="text/css">
-table.main {
-  height: 80%;
-  width: 60%; 
-  border: 3px solid black;
- background-color: transparent;
-}
-table.main td {
-
-font-family: verdana,arial, helvetica,  sans-serif;
-font-size: 34px;
-}
-table.main th {
-    border-width: 1px 1px 1px 1px;
-    padding: 0px 0px 0px 0px;
-   background-color: #FF6600;
-}
-
-table.main a{TEXT-DECORATION: none;
-            color:black;}
-
-table,td{ border: 2px solid black}
-
-tr:nth-child(even) {
-   background-color: #FF6600;
-}
-</style>
-
-
-</script>
-<style type="text/css">
-table.main {
-  height: 80%;
-  width: 60%; 
-  border: 3px solid black;
- background-color: transparent;
- align-content: right;
-}
-table.main td {
-
-font-family: verdana,arial, helvetica,  sans-serif;
-font-size: 34px;
-}
-
-table.main th {
-    border-width: 1px 1px 1px 1px;
-    padding: 0px 0px 0px 0px;
-   background-color: #FF6600;
-}
-
-table.main a{TEXT-DECORATION: none;
-            color:black;}
-
-table,td{ border: 2px solid black}
-</style>
-
 
 </head>
 <body>
 
-
-
 <ul class="navigation">
-    <li class="nav-item"><a href="meniu_admin.php">Acasa</a></li>
-    <li class="nav-item"><a href="test.php">Despre</a></li>
+    <li class="nav-item"><a href="#">Acasa</a></li>
+ 
   
-    <li class="nav-item"><a href="functii.php">Contact</a></li>
-    <li class="nav-item"><a href="programare_online.php">Programare online</a></li>
-    <li class="nav-item"><a href="#">Obiecte permise la vizita</a></li>
-    <li class="nav-item"><a href="login.php">Log out</a></li>
+    <li class="nav-item"><a href="#">Contact</a></li>
+   <li class="nav-item"><a href="program_online.php">Programare online</a></li>
+        <li class="nav-item"><a href="#">Acces penitenciar <span class="sub-navigation"></span></span></a>
+        <ul>
+
+            <li> <a href="#">Obiecte permise la vizita</a></li>
+            <li> <a href="#">Obiecte nepermise la vizita </a></li>
+             <li class="nav-item"><a href="login.php">Log out</a></li>
+            
+        </ul>
+    </li>
+ 
+    
 </ul>
 
 <input type="checkbox" id="nav-trigger" class="nav-trigger" />
 <label for="nav-trigger"></label>
 <div class="site-wrap">
+
+<h1>Bine ati venit la Programare Online!</h3> <br><br><br>
+<h3>Acordarea dreptului la vizita pentru detinuti se efectueaza pe baza unei programari prealabile. Programarea se face inainte de data prezentarii in vederea acordarii vizitei.
+Solicitarea unei programari se face astfel:
+Apasati click pe una din zilele in care doriti sa va programati si urmati pasii indicati pentru
+a completa formularul.  Ca urmare a intrarii in vigoare a Deciziei 470/13.06.2016 privind ,,Procedura de lucru pentru programarea prealabila a vizitei", incepand cu data de 01.07.2016:</h3> <br><br>
+<h2>
+<ol>
+<li>In cazul in care persoanele vizitatoare intarzie fata de ora la care au fost programate, vizita nu se mai acorda, urmand să se solicite o alta programare la o dată ulterioara.</li>
+ 
+<li>Intervalul de timp dintre momentul solicitarii unei programari și momentul acordarii efective a vizitei nu poate fi mai mare de 5 zile.</li>
+</h2></ol><br><br>
 
 
 
@@ -193,7 +155,7 @@ echo "<center><a href=calendar.php>Reset Calendar</a></center>";
 <div>
     <a href="#close" title="Close" class="close">X</a>
     <h2>Programare online</h2> <br><br>
-    <p> Pentru programarea unei vizite va rugam sa completati acest formular cu datele dumeavoastra
+    <p> Pentru programarea unei vizite va rugam sa completati acest formular cu datele dumneavoastra
     din buletin. <br> <br>Daca doriti sa vizitati un detinut cu un vizitator ce si-a creat cont va rugam sa introduceti username-ul vizitatorului. </p><br>
 
     
