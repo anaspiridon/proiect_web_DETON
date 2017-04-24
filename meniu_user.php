@@ -1,59 +1,32 @@
-<!DOCTYPE HTML >
 <html>
+<link href="meniu_user.css" type="text/css" rel="stylesheet">
 <head>
-  <title>WELCOME</title>
-
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>DETON</title>
 </head>
-<div id="Form"> 
+<body>
+<ul class="navigation">
+    <li class="nav-item"><a href="#">Acasa</a></li>
+ 
+  
+    <li class="nav-item"><a href="#">Contact</a></li>
+   <li class="nav-item"><a href="#">Programare online</a></li>
+        <li class="nav-item"><a href="#">Acces penitenciar <span class="sub-navigation"></span></span></a>
+        <ul>
 
-<form action="meniu_user.php" method="post">
-
-  Nume: <input type="text" align="right" name="nume" value="">
-  <br><br>
-  Prenume: <input type="text" name="prenume" value="">
-  <br><br>
-  Email: <input type="text" name="email" value="">
-  <br><br>
-  Telefon: <input type="text" name="telefon" value="">
-  <br><br>
-  Adresa: <input type="text" name="adresa" value="">
-  <br><br>
-  Subiect: <input type="text" name="subiect" value="">
-  <br><br>
-  Continut: <input type="text" name="continut" value="">
-  <br><br><br><br>
-  <input type="submit">  
-</form>
-</div>
-<style type="text/css">
-#Form {
-    position:relative;
-    float:right;
-    border: 2px solid #003B62;
-    font-family: verdana;
-    background-color: #FFE4C4;
-    padding-left: 10px;
-     height: 400px;
-}
-
-.container {
-		font-weight: normal;
-		color: #0088dd;
-
-		text-align: center;
-            }
-</style>
-
-<body bgcolor="#EEEEEE">
-<h2 align="center">Meniu User </h2> <br><br>
-
-<div class="container">
-    <!-- other content -->
+            <li> <a href="#">Obiecte permise la vizita</a></li>
+            <li> <a href="#">Obiecte nepermise la vizita </a></li>
+            
+        </ul>
+    </li>
+ 
     
-<p><a href="cauta_dupa_nume.php">Cauta detinut</a></p>
-<p><a href="pedepse.php">Pedepse </a><p>
-</div> 
+</ul>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger"></label>
+<div class="site-wrap">
+
+</div>
 </body>
-
-
 </html>
