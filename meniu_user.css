@@ -1,5 +1,51 @@
-.navigation {
+input[type=text] {
+    padding: 8px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border:  2px solid #FF6600;
+    border-radius: 4px;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 12px;
+}
+
+label {
+  font-family: "Impact", Charcoal, sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+#leftcolumn, #rightcolumn {
+    
+    float: left;
+    min-height: 450px;
+
+}
+#leftcolumn {
+     width: 50%;
+  }
+#rightcolumn {
+     width: 40%;
  
+}
+
+#google_translate_element{
+	padding: 8px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border:  2px solid #FF6600;
+    border-radius: 4px;  
+}
+
+img{
+	padding: 8px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border:  2px solid #FF6600;
+    border-radius: 4px; 
+}
+
+.navigation {
+  /* critical sizing and position styles */
   width: 100%;
   height: 100%;
   position: fixed;
@@ -9,35 +55,46 @@
   left: 0;
   z-index: 0;
   
-
+  /* non-critical appearance styles */
   list-style: none;
   background: #111;
 }
-
 .button {
-    background-color: #ED4200; 
-    border: none;
-    color: white;
+    background-color: black;
+    color: black;
+    border: 2px solid #FF6600;
     padding: 15px 32px;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
+	font-family: "Lucida Console", Monaco, monospace;
+	color: white;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
 }
+.myDiv, 
+{
+  
+  width:300px;
+  float:left;
+}
+.myyDiv
+{
 
-
-/* Navigation Menu - lista */
+  width:300px;
+  float:roght;
+}
+/* Navigation Menu - List items */
 .nav-item {
-
+  /* non-critical appearance styles */
   width: 200px;
   border-top: 1px solid #111;
   border-bottom: 1px solid #000;
 }
 
 .nav-item a {
- 
+  /* non-critical appearance styles */
   display: block;
   padding: 1em;
   background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
@@ -52,28 +109,33 @@
   background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(75,20,20,0.65) 100%);
 }
 
-/* tot ce nu este in navigation */
+/* Site Wrapper - Everything that isn't navigation */
 .site-wrap {
-  min-height: 100%;
+  /* Critical position and size styles */
+  min-height: 200%;
   min-width: 100%;
-  background-color: yellow; 
+  background-color: white; /* Needs a background or else the nav will show through */
   position: relative;
   top: 0;
   bottom: 100%;
   left: 0;
   z-index: 1;
+  float:left;
+  width :100%;
 
- 
+  /* non-critical apperance styles */
   padding: 4em;
   background-image: linear-gradient(135deg, rgb(254,255,255) 0%,rgb(221,241,249) 35%,rgb(160,216,239) 100%);
   background-size: 200%;
 }
+.site-wrap div
+{
+  float:left;
+}
 
-
-
-
+/* Nav Trigger */
 .nav-trigger {
-  /* ascunde input ul checkbox ului */
+  /* critical styles - hide the checkbox input */
   position: absolute;
   clip: rect(0, 0, 0, 0);
 }
@@ -91,11 +153,12 @@ h1 {
 }
 
 label[for="nav-trigger"] {
- 
+  /* critical positioning styles */
   position: fixed;
   left: 15px; top: 15px;
   z-index: 2;
-
+  
+  /* non-critical apperance styles */
   height: 30px;
   width: 30px;
   cursor: pointer;
@@ -103,7 +166,7 @@ label[for="nav-trigger"] {
   background-size: contain;
 }
 
-
+/* Make the Magic Happen */
 .nav-trigger + label, .site-wrap {
   transition: left 0.2s;
 }
@@ -118,49 +181,49 @@ label[for="nav-trigger"] {
 }
 
 body {
-    
-    /* fara asta body ul are scroll prea mult cand meniul este deschis */
+    /* Without this, the body has excess horizontal scroll when the menu is open */
   overflow-x: hidden;
 }
 
+/* Additional non-critical styles */
 
 
-h1, h3, p {
-  max-width: 600px;
-  margin: 0 auto 1em;
+h1 {
+    color:  #FF6600;
+    text-align: right-side;
+	font-family:"Arial Black", Gadget, sans-serif;
+    font-size: 70px;
+	padding: 10px ;
 }
 
-code {
-    padding: 2px;
-    background: #ddd;
-}
-table {
-    position: relative;
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 60%;
-    margin-left: auto;
+h3 {
+	color:  black;
+	font-family: "Lucida Console", Monaco, monospace;
+    font-size: 25px;
+	padding: 10px ;
 }
 
-label {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  font-size: 20px;
-  text-decoration: none;
-   position: relative;
-   margin-left: auto;
-  
+h4 {
+	color:  black;
+	font-family: "Lucida Console", Monaco, monospace;
+    font-size: 18px;
+	padding: 10px ;
 }
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+h5 {
+	color:  black;
+	font-family: "Lucida Console", Monaco, monospace;
+    font-size: 18px;
+	padding: 8px ;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
+.img-holder {position: relative;}
+.img-holder .link {
+    position: absolute;
+    bottom: 10px; /*your button position*/
+    right: 10px; /*your button position*/
 }
-
-
+/* Micro reset */
 *,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
 html, body { height: 100%; width: 100%; font-family: Helvetica, Arial, sans-serif; }
+
