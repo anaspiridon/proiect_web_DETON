@@ -1,5 +1,5 @@
 <html>
-<link href="meniu_user.css" type="text/css" rel="stylesheet">
+<link href="obiecte_permise.css" type="text/css" rel="stylesheet">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <title>DETON</title>
@@ -28,9 +28,9 @@
 <div class="site-wrap">
 <h1 align="right"> Ce ai voie sa introduci intr-o vizita</h1><br><br><br>
 
-<p> In tabelul de mai jos sunt <em >BUNURILE care pot fi primite, cumparate, pastrate si folosite de catre detinuti </em>
-in conformitate cu HOTARAREA  Nr.157/2016 din 10 martie 2016<br>
-pentru aprobarea Regulamentului de aplicare a Legii nr. 254/2013 <br>privind executarea pedepselor si a masurilor privative de libertate <br> dispuse de organele judiciare în cursul procesului penal</p>
+<p> In tabelul de mai jos sunt <em ><b>BUNURILE care pot fi primite, cumparate, pastrate si folosite de catre detinuti </b></em>
+in conformitate cu HOTARAREA Nr.157/2016 din 10 martie 2016
+pentru aprobarea Regulamentului de aplicare a Legii nr. 254/2013 privind executarea pedepselor si a masurilor privative de libertate dispuse de organele judiciare în cursul procesului penal:</p> <br>
 
 <table align="left">
  <tr>
@@ -244,9 +244,60 @@ pentru aprobarea Regulamentului de aplicare a Legii nr. 254/2013 <br>privind exe
 
 </tr>
 
+<tr>
+    <th>3</th>
+    <th valign="middle">Produse alimentare</th>
+
+<th valign="top"><ul> 
+<li> Alimente  </li>
+<li> Fructe </li>
+<li> Legume   </li>
+<li> Apa minerala  </li>
+<li> Bauturi racoritoare  </li>
+<li> Ceai  </li>
+<li>Cafea </li>
+<li>Lapte  </li>
 
 
-</table>
+</ul>
+</th>
+
+<th valign="top"><ul> 
+
+</th>
+
+
+<th valign="top"><ul> 
+<li> Da </li>
+<li> Da </li>
+<li> Da </li>
+<li> Nu </li>
+<li> Nu </li>
+<li> Nu </li>
+<li> Nu </li>
+<li> Nu </li>
+</ul>
+</th>
+
+
+<th valign="top"><ul> 
+<li> Da </li>
+<li> Da </li>
+<li> Da </li>
+<li> Da </li>
+<li> Da </li>
+<li> Da </li>
+<li> Da </li>
+<li> Da </li>
+
+</ul>
+</th>
+</ul>
+</th>
+</tr>
+
+</table><br> <br>
+<p>* Cu aprobarea directorului locului de deținere. </p>
 </div>
 </body>
 </html>
