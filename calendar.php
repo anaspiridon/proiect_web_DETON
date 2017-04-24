@@ -198,7 +198,7 @@ echo "<center><a href=calendar.php>Reset Calendar</a></center>";
 
     
 
-    <p><form action="calendar.php" method="post">
+    <p><form action="#openModal2" method="post">
 <div>
 <label for="username" >Seria:</label>
   <input type="text"  maxlength="2" style="text-transform:uppercase" 
@@ -227,7 +227,18 @@ echo "<center><a href=calendar.php>Reset Calendar</a></center>";
 
 </div>
 
+ <div id="openModal2" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Programare online</h2><br><br>
+    <h3>Va multumim!</h3><br>
+    <p><strong>Veti primi confirmarea vizitei prin email!</strong></p>
+    
 </div>
+
+
+</div>
+
 </body>
 </html>
 
