@@ -1,4 +1,3 @@
-
 <html>
 <link href="meniu_user.css" type="text/css" rel="stylesheet">
 <head>
@@ -27,6 +26,11 @@
 <input type="checkbox" id="nav-trigger" class="nav-trigger" />
 <label for="nav-trigger"></label>
 <div class="site-wrap">
+<h1 align="right"> Ce ai voie sa introduci intr-o vizita</h1><br><br><br>
+
+<p> In tabelul de mai jos sunt <em >BUNURILE care pot fi primite, cumparate, pastrate si folosite de catre detinuti </em>
+in conformitate cu HOTARAREA  Nr.157/2016 din 10 martie 2016<br>
+pentru aprobarea Regulamentului de aplicare a Legii nr. 254/2013 <br>privind executarea pedepselor si a masurilor privative de libertate <br> dispuse de organele judiciare în cursul procesului penal</p>
 
 <table align="left">
  <tr>
@@ -151,10 +155,98 @@
 
   </tr>
 
+<tr>
+    <th>2</th>
+    <th valign="middle">Articole pentru igiena</th>
+
+   <th valign="top"><ul> 
+<li> Prosoape </li>
+<li> Batiste </li>
+<li> Servetele din hartie </li>
+<li> Pieptene sau perie pentru par, cu exceptia celor care contin elemente metalice  </li>
+<li> Aparat de ras de unica folosinta  </li>
+<li> Aparat de ras electric cu alimentare la baterie </li>
+<li> Aparat de tuns electric cu alimentare la baterie  </li>
+<li> Periuta de dinti manuala sau cu baterii </li>
+<li> Aparat de uscat parul de maximum 550 W </li>
+<li> Unghiera fara cutit de lungime maxima de 10 cm  </li>
+<li> Lighean din material plastic, rotund, cu diametrul de maximum 50 cm  </li>
+<li> Perii pentru haine si incaltaminte  </li>
+<li> Articole pentru igiena personala intima pentru femei (tampoane absorbante) </li>
+<li> Produsele cosmetice si de intretinere (sapun, detergenti, sampon, pasta de dinti, pasta de ras, deodorant solid, hartie igienica) </li>
+<li> Parfum si lotiune dupa ras, fara alcool, ambalate in recipiente cu un volum maxim de 200 ml, care sa nu permita pulverizarea  </li>
+</ul>
+
+
+<th valign="top">
+<ul> 
+<li> 3 bucati </li>
+<li> 5 bucati </li>
+<li> In raport de nevoi </li> 
+<li> 1 bucata </li><br>
+<li> In raport de nevoi </li>
+<li> 1 bucata </li><br>
+<li> 1 bucata </li><br>
+<li> 2 bucati </li>
+<li> 1 bucata* </li>
+<li> 1 bucata </li><br>
+<li> 1 bucata </li><br>
+<li> 1 bucata din fiecare</li>
+<li> In raport de nevoi </li><br>
+<li> In raport de nevoi </li><br><br><br>
+<li> 1 bucata din fiecare</li>
+
+</ul>
+
+
+
+<th valign="top"><ul> 
+<li> Da </li>
+<li> Da </li>
+<li> Nu </li>
+<li> Nu </li><br>
+<li> Nu </li>
+<li> Nu </li><br>
+<li> Nu </li><br>
+<li> Nu </li>
+<li> Nu </li>
+<li> Nu </li><br>
+<li> Nu </li><br>
+<li> Nu </li>
+<li> Nu </li><br>
+<li> Nu </li><br><br><br>
+<li> Nu </li>
+
+
+
+</ul>
+
+
+<th valign="top"><ul> 
+<li> Da </li>
+<li> Da </li>
+<li> Da </li>
+<li> Da </li><br>
+<li> Da </li>
+<li> Da </li><br>
+<li> Da </li><br>
+<li> Da </li>
+<li> Da </li>
+<li> Da </li><br>
+<li> Da </li><br>
+<li> Da </li>
+<li> Da </li><br>
+<li> Da </li><br><br><br>
+<li> Da </li>
+
+
+</ul>
+
+</tr>
+
 
 
 </table>
 </div>
 </body>
 </html>
-
