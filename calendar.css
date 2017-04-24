@@ -196,7 +196,7 @@ td {
 tr:nth-child(even) {
     background-color: #FF6600;
 }
-h3 {
+h3 {font-size: 15px;
     font-family: Book Antiqua;
     max-width: 80%;
 }
