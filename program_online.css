@@ -1,0 +1,179 @@
+.navigation {
+ 
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  
+
+  list-style: none;
+  background: #111;
+}
+
+.button {
+    background-color: #ED4200; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+/* Navigation Menu - lista */
+.nav-item {
+
+  width: 200px;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #000;
+}
+
+.nav-item a {
+ 
+  display: block;
+  padding: 1em;
+  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+}
+
+.nav-item a:hover {
+  color: #c74438;
+  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(75,20,20,0.65) 100%);
+}
+
+/* tot ce nu este in navigation */
+.site-wrap {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: yellow; 
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+
+ 
+  padding: 4em;
+  background-image: linear-gradient(135deg, rgb(254,255,255) 0%,rgb(221,241,249) 35%,rgb(160,216,239) 100%);
+  background-size: 200%;
+}
+
+
+
+
+.nav-trigger {
+  /* ascunde input ul checkbox ului */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+.sub-navigation:after
+ {
+  content: '\203A';
+  float: right;
+  margin-right: 20px;
+  transform:rotate(90deg);
+ }
+.navigation ul {display :none;}
+.navigation li:hover ul {display:block;}
+h1 {
+    text-align: center;
+}
+
+label[for="nav-trigger"] {
+ 
+  position: fixed;
+  left: 15px; top: 15px;
+  z-index: 2;
+
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+}
+
+
+.nav-trigger + label, .site-wrap {
+  transition: left 0.2s;
+}
+
+.nav-trigger:checked + label {
+  left: 215px;
+}                                   
+
+.nav-trigger:checked ~ .site-wrap {
+  left: 200px;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+body {
+    
+    /* fara asta body ul are scroll prea mult cand meniul este deschis */
+  overflow-x: hidden;
+}
+
+
+
+h1, h3, p {
+  max-width: 56%;
+  font-family: Gill Sans Extrabold, sans-serif; 
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0 auto 1em;
+  align-content: center;
+}
+
+ h2{max-width: 56%;
+  font-family:Palatino Linotype;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0 auto 1em;
+  align-content: center;
+ }
+
+
+code {
+    padding: 2px;
+    background: #ddd;
+}
+table {
+    position: relative;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    margin-left: auto;
+}
+
+label {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+   position: relative;
+   margin-left: auto;
+  
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+html, body {  width: 100%; font-family: Gill Sans Extrabold, sans-serif; }
