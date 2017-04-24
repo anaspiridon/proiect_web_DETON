@@ -1,49 +1,59 @@
-<!DOCTYPE HTML PUBLIC>
+<!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="login.css" type="text/css" rel="stylesheet">
 <head>
-<h2>DETON</h2>
-</head>
-<body bgcolor="#EEEEEE">
 
+</head>
+
+<body>
+
+<h1>DETON</h1>
+
+<p>Bine ați venit pe Deton!</p>
 
 <?php 
 
 function get_input($username = "", $password = "") 
 {
   echo <<<END
+ <div> 
   <form action="login.php" method="post">
-  Username:<br>
-  <input type="text" name="username" value="$username">
+  <label for="username">Nume utilizator:</label>
   <br>
-  Password:<br>
-  <input type="password" name="password" value="$password">
+  <input type="text" name="username" value="$username" placeholder="Numele tău...">
+  <br>
+  <label for="password">Parolă</label>
+  <br>
+  <input type="password" name="password" value="$password" placeholder="Parola ta...">
   <br><br>
 
-  Type:
+  
+  <label for="type">Tip utilizator:</label>
   <select name="type">
       <option value="admin">admin</option>
       <option value="user">user</option>
 </select>
   <p> 
-  <input type="submit">
+ <button class="button">Conectează-te</button>
   </form>
+ </div> 
 END;
 
 echo <<<HTML
-<a href="new_account.php">Create new account</a>
+<a href="new_account.php"> <button class="button">Creaza cont nou</button></a>
 HTML;
 } 
 
 if(!isset($_REQUEST['username'])) {
-   echo "WELCOME!<h5> <break>
-         LOG IN   <h4><p>"; 
    get_input();
 }
 else {
  
   if (empty($_REQUEST['username']) or empty($_REQUEST['password'])) {
-    echo "You did not enter text in both 
-          fields, please re-enter the information.<p>"; 
+       echo '<script language="javascript">';
+            echo 'alert("Nu ai introdus informatii in ambele campuri! Te rugam incerca din nou!")';
+            echo '</script>';
     get_input($_REQUEST['username'], $_REQUEST['password']);
   }
   
@@ -54,7 +64,9 @@ else {
    $conn = oci_connect("Student","STUDENT", "localhost");
 
    if (!$conn)  {
-    echo "An error occurred connecting to the database"; 
+       echo '<script language="javascript">';
+            echo 'alert("Eroare la conectarea la baza de date")';
+            echo '</script>';
     exit; 
   }
 
@@ -66,7 +78,9 @@ else {
       $stmt = oci_parse($conn, $sql);
 
     if(!$stmt) {
-  echo "An error occurred in parsing the sql string.\n";
+     echo '<script language="javascript">';
+            echo 'alert("An error occurred in parsing the sql string!")';
+            echo '</script>';
   exit;
 }
  
@@ -76,12 +90,16 @@ else {
 if(oci_fetch($stmt)) {
   $verif= OCIResult($stmt,1); 
 }else {
-  echo "An error occurred data \n";
+     echo '<script language="javascript">';
+            echo 'alert("An error occurred data!")';
+            echo '</script>';
   exit;
 }
 
     if ($verif==1)
-  {   echo "te-ai logat!!!";
+  {       echo '<script language="javascript">';
+            echo 'alert("Te-ai logat!")';
+            echo '</script>';
 
     if ($type=='user' AND $verif==1)
     {
@@ -93,17 +111,19 @@ if(oci_fetch($stmt)) {
     }
 }
 else {
-    echo "user gresit!!";
+           echo '<script language="javascript">';
+            echo 'alert("User gresit!")';
+            echo '</script>';
     exit;
     }
 
   }
  
- 
 }
 
 
 ?>
+
 
 </body>
 </html>
