@@ -7,7 +7,7 @@ $end_year   = 2018; // Ending year for dropdown list box
 
 <!doctype html public >
 <html>
-<link href="meniu_user.css" type="text/css" rel="stylesheet">
+<link href="calendar.css" type="text/css" rel="stylesheet">
 <head>
 <title>DETON</title>
 
@@ -102,6 +102,9 @@ table,td{ border: 2px solid black}
 <label for="nav-trigger"></label>
 <div class="site-wrap">
 
+
+
+
 <?Php
 @$month = $_GET['month'];
 @$year = $_GET['year'];
@@ -167,7 +170,7 @@ echo "<tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</t
 
 for ($i = 1; $i <= $no_of_days; $i++) {
     $pv = "'$month'" . "," . "'$i'" . "," . "'$year'";
-    echo $adj . "<td><a href='#' onclick=\"post_value($pv);\">$i</a>"; // Zilele din interiorul calendarului
+    echo $adj . "<td><a href=\"#openModal1\">$i</a>"; // Zilele din interiorul calendarului
     echo " </td>";
     $adj = '';
     $j++;
@@ -184,6 +187,46 @@ echo "</tr></table>";
 echo "<center><a href=calendar.php>Reset Calendar</a></center>";
 
 ?>
+
+
+<div id="openModal1" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Programare online</h2> <br><br>
+    <p> Pentru programarea unei vizite va rugam sa completati acest formular cu datele dumeavoastra
+    din buletin. <br> <br>Daca doriti sa vizitati un detinut cu un vizitator ce si-a creat cont va rugam sa introduceti username-ul vizitatorului. </p><br>
+
+    
+
+    <p><form action="calendar.php" method="post">
+<div>
+<label for="username" >Seria:</label>
+  <input type="text"  maxlength="2" style="text-transform:uppercase" 
+  placeholder="Seria buletinului tau...">
+  <label for="nr" >NR:</label>
+ <input name="nr"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    type = "number"
+    maxlength = "6"/>
+<br><br>
+ <label for="adresa" >Adresa de domiciliu:</label><br>
+  <input type="adresa" name="adresa" placeholder="Adresa de domiciliu...">
+  <br><br>
+
+<label for="username" >Username vizitator invitat:</label><br>
+  <input type="username" name="username" placeholder="Username-ul prietenului tau...">
+  <br><br>
+
+  <p> 
+  <button> Trimite </button>
+
+  </div>
+  </form>
+</div>
+</div>
+
+</div>
+
 </div>
 </body>
 </html>
