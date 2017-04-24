@@ -103,7 +103,7 @@ function pagination($query,$per_page=10,$page=1,$url='?'){
 ?>
 
 <html>
-<link href="paginationn.css" type="text/css" rel="stylesheet">
+<link href="vizualizare_vizite.css" type="text/css" rel="stylesheet">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <title>DETON</title>
@@ -112,7 +112,7 @@ function pagination($query,$per_page=10,$page=1,$url='?'){
 
 <ul class="navigation">
     <li class="nav-item"><a href="meniu_admin.php">Acasa</a></li>
-    <li class="nav-item"><a href="test.php">Lista detinuti</a></li>
+    <li class="nav-item"><a href="vizualizare_detinuti.php">Lista detinuti</a></li>
     <li class="nav-item"><a href="optiuni_detinut.php">Optiuni detinuti <span class="sub-navigation"></span></span></a>
         <ul> 
             <li> <a href="sterge_detinuti.php">Sterge detinut</a></li>
@@ -121,7 +121,7 @@ function pagination($query,$per_page=10,$page=1,$url='?'){
         </ul>
     </li>
     <li class="nav-item"><a href="functii.php">Statistici</a></li>
-    <li class="nav-item"><a href="#">Lista Vizitelor</a></li>
+    <li class="nav-item"><a href="vizualizare_vizite.php">Lista Vizitelor</a></li>
 </ul>
 
 <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -131,31 +131,53 @@ function pagination($query,$per_page=10,$page=1,$url='?'){
 <div class="site-wrap" >
 <h1> Lista Vizitelor</h1>
 <p>
-<ul>
-<li>
+
 Tipul relatiei:
-<br>
-  <ul>
-	<li>
+
  		<input id="option" type="checkbox" name="field" value="option">
   		<label for="option">Prieteni</label>
-    </li>
- 	<li>
+
  		<input id="option" type="checkbox" name="field" value="option">
   		<label for="option">Rude</label>
-    </li>
-	<li>
+
  		<input id="option" type="checkbox" name="field" value="option">
   		<label for="option">Avocati</label>
-  </li>
-  </ul>
- </li>
- </ul> 
- <label for="nume">Nume detinut:</label>
+</p>
+<p>
+    <label for="nume">Nume detinut:</label>
      <input type="text" name="nume" value="$nume">
-  </p>
-    <button class="button">Submit</button> 
 
+    <label for="nume">ID detinut:</label>
+     <input type="text" name="nume" value="$nume">
+
+   <label >ID Institutie:</label>
+    <select name="type">
+      <option value=1>1</option>
+      <option value=2>2</option>
+      <option value=3>3</option>
+      <option value=4>4</option>
+      <option value=5>5</option>
+    </select>
+
+</p>
+<p>
+    <label for="nume">Intre datile:  </label>
+     <input type="date" name="nume" value="$nume">
+
+    <label for="nume">Si :  </label>
+     <input type="date" name="nume" value="$nume">
+
+</p>
+<p>
+    <label for="nume">Intre orele:  </label>
+     <input type="text" name="nume" value="$nume">
+
+    <label for="nume">si:  </label>
+     <input type="date" name="nume" value="$nume">
+</p>
+<p>
+    <button class="button">Submit</button> 
+</p>
     <?php
 $page = (int)(!isset($_GET['page']) ? 1 : $_GET['page']);
 if ($page <= 0) $page = 1;
