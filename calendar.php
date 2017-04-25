@@ -38,8 +38,8 @@ self.location='calendar.php?month=' + month_val + '&year=' + year_val ; // reia 
         <li class="nav-item"><a href="#">Acces penitenciar <span class="sub-navigation"></span></span></a>
         <ul>
 
-            <li> <a href="#">Obiecte permise la vizita</a></li>
-            <li> <a href="#">Obiecte nepermise la vizita </a></li>
+            <li> <a href="obiecte_permise.php">Obiecte permise la vizita</a></li>
+            <li> <a href="obiecte_nepermise.php">Obiecte nepermise la vizita </a></li>
         </ul>
         <li class="nav-item"><a href="login.php">Log out</a></li>
     </li>
@@ -131,8 +131,18 @@ echo "<tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</t
 
 for ($i = 1; $i <= $no_of_days; $i++) {
     $pv = "'$month'" . "," . "'$i'" . "," . "'$year'";
+    if ($i >15)
+   { echo $adj . "<td><div class=\"dropdown\">
+  <span>$i</span>
+  <div class=\"dropdown-content\">
+    <p>Ziua aleasa este indisponibila!</p>
+  </div>
+</div>"; // Zilele din interiorul calendarului
+     echo " </td>";}
+    else {
     echo $adj . "<td><a href=\"#openModal1\">$i</a>"; // Zilele din interiorul calendarului
     echo " </td>";
+    }
     $adj = '';
     $j++;
     if ($j == 7) {
@@ -203,27 +213,6 @@ echo "<center><a href=calendar.php>Reset Calendar</a></center>";
     <p><strong>Veti primi confirmarea vizitei prin email!</strong></p>
     
 </div>
-
-
-</div>
-
-</body>
-</html>
-
-</body>
-</html>
-</div>
-</div>
-
-</div>
-
- <div id="openModal2" class="modalDialog">
-<div>
-    <a href="#close" title="Close" class="close">X</a>
-    <h2>Programare online</h2><br><br>
-    <h3>Va multumim!</h3><br>
-    <p><strong>Veti primi confirmarea vizitei prin email!</strong></p>
-    
 </div>
 
 
@@ -232,5 +221,4 @@ echo "<center><a href=calendar.php>Reset Calendar</a></center>";
 </body>
 </html>
 
-</body>
-</html>
+
