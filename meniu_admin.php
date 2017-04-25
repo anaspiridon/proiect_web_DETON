@@ -1,16 +1,36 @@
-<!DOCTYPE HTML>
 <html>
+<link href="meniu_admin.css" type="text/css" rel="stylesheet">
 <head>
-<title>Search for imprisoned</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>DETON</title>
 </head>
-<body >
-<h2>Meniu Admin</h2>
+<body bgcolor="#EEEEEE">
 
-<p><a href="vizualizare_detinuti.php">Lista detinuti</a></p>
-<p><a href="optiuni_detinut.php">Optiuni detinuti</a><p>
-<p><a href="functii.php">Statistici</a><p>
-<p><a href="paginarea.php">Lista vizitelor</a><p>
+<ul class="navigation">
+    <li class="nav-item"><a href="meniu_admin.php">Acasa</a></li>
+    <li class="nav-item"><a href="vizualizare_detinuti.php">Lista detinuti</a></li>
+    <li class="nav-item"><a href="#">Optiuni detinuti <span class="sub-navigation"></span></span></a>
+        <ul> 
+            <li> <a href="sterge_detinuti.php">Sterge detinut</a></li>
+            <li> <a href="insereaza_detinut.php">Insereaza detinut </a></li>
+        </ul>
+    </li>
+    <li class="nav-item"><a href="statistici.php">Statistici</a></li>
+    <li class="nav-item"><a href="vizualizare_vizite">Lista Vizitelor</a></li>
+</ul>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger"></label>
 
 
+<div class="site-wrap" >
+ <h1> Detention Monitoring Tool </h1> 
+ <br>
+ <br>
+ <h3>
+ Acesta aplicatie ofera supor in gestiunea vizitelor de care beneficiaza persoanele condamnate la executarea unei pedepse intr-una dintre cele 5 institutii manageriate de noi!
+ </h3>
+
+</div>
 </body>
 </html>
