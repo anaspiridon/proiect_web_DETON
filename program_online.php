@@ -9,21 +9,15 @@
 <body>
 
 <ul class="navigation">
-    <li class="nav-item"><a href="#">Acasa</a></li>
- 
-  
-    <li class="nav-item"><a href="#">Contact</a></li>
+   <li class="nav-item"><a href="meniu_user.php">Acasa</a></li>
+    <li class="nav-item"><a href="contact.php">Contact</a></li>
    <li class="nav-item"><a href="program_online.php">Programare online</a></li>
         <li class="nav-item"><a href="#">Acces penitenciar <span class="sub-navigation"></span></span></a>
-        <ul>
-
-            <li> <a href="#">Obiecte permise la vizita</a></li>
-            <li> <a href="#">Obiecte nepermise la vizita </a></li>
-            
-        </ul>
-    </li>
- 
-    
+         <ul>
+            <li> <a href="obiecte_permise.php">Obiecte permise la vizita</a></li>
+            <li> <a href="obiecte_nepermise.php">Obiecte nepermise la vizita </a></li>
+         </ul>   
+	<li class="nav-item"><a href="login.php">Log out</a></li>
 </ul>
 
 <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -103,7 +97,7 @@ elseif (empty($_REQUEST['prenume']) and empty($_REQUEST['nume']) and empty($_REQ
         $rezultat = ociresult($stmt, 1);
         if ($rezultat == 1) {
             ob_start();
-            require 'calendar.php';
+            require "calendar.php";
         } else {
             
             echo '<script language="javascript">';
@@ -111,7 +105,7 @@ elseif (empty($_REQUEST['prenume']) and empty($_REQUEST['nume']) and empty($_REQ
             echo '</script>';
             
 ?>
-<form action="program.php" method="post">
+<form action="calendar.php" method="post">
 <p>
     <label for="Prenume">
     <span>Prenume*</span>

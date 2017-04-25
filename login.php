@@ -96,9 +96,7 @@ else {
 	}
 
     if ($verif==1)
-  {      echo '<script language="javascript">';
-            echo 'alert("Te-ai logat!")';
-            echo '</script>';
+  {      
 
     if ($type=='user' AND $verif==1)
     {

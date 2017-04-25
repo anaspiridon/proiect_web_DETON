@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC ">
 <html>
 <link href="meniu_admin.css" type="text/css" rel="stylesheet">
 <head>
@@ -8,7 +9,7 @@
 
 <ul class="navigation">
     <li class="nav-item"><a href="meniu_admin.php">Acasa</a></li>
-    <li class="nav-item"><a href="vizualizare_detinuti.php">Lista detinuti</a></li>
+	  <li class="nav-item"><a href="vizualizare_detinuti.php">Lista detinuti</a></li>
     <li class="nav-item"><a href="#">Optiuni detinuti <span class="sub-navigation"></span></span></a>
         <ul> 
             <li> <a href="sterge_detinuti.php">Sterge detinut</a></li>
@@ -16,7 +17,8 @@
         </ul>
     </li>
     <li class="nav-item"><a href="statistici.php">Statistici</a></li>
-    <li class="nav-item"><a href="vizualizare_vizite">Lista Vizitelor</a></li>
+    <li class="nav-item"><a href="vizualizare_vizite.php">Lista Vizitelor</a></li>
+     <li class="nav-item"><a href="login.php">Log out</a></li>
 </ul>
 
 <input type="checkbox" id="nav-trigger" class="nav-trigger" />
