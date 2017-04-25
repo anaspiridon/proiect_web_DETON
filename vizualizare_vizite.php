@@ -113,14 +113,13 @@ function pagination($query,$per_page=10,$page=1,$url='?'){
 <ul class="navigation">
     <li class="nav-item"><a href="meniu_admin.php">Acasa</a></li>
     <li class="nav-item"><a href="vizualizare_detinuti.php">Lista detinuti</a></li>
-    <li class="nav-item"><a href="optiuni_detinut.php">Optiuni detinuti <span class="sub-navigation"></span></span></a>
+    <li class="nav-item"><a href="#">Optiuni detinuti <span class="sub-navigation"></span></span></a>
         <ul> 
             <li> <a href="sterge_detinuti.php">Sterge detinut</a></li>
             <li> <a href="insereaza_detinut.php">Insereaza detinut </a></li>
-            <li> <a href="update_detinut.php">Actualizeaza detinut</a></li>
         </ul>
     </li>
-    <li class="nav-item"><a href="functii.php">Statistici</a></li>
+    <li class="nav-item"><a href="Statistici.php">Statistici</a></li>
     <li class="nav-item"><a href="vizualizare_vizite.php">Lista Vizitelor</a></li>
 </ul>
 
