@@ -9,16 +9,15 @@
 
 <ul class="navigation">
     <li class="nav-item"><a href="meniu_admin.php">Acasa</a></li>
-	  <li class="nav-item"><a href="vizualizare_detinuti.php">Lista detinuti</a></li>
+      <li class="nav-item"><a href="vizualizare_detinuti_admin.php">Lista detinuti</a></li>
     <li class="nav-item"><a href="#">Optiuni detinuti <span class="sub-navigation"></span></span></a>
         <ul> 
-            <li> <a href="sterge_detinuti.php">Sterge detinut</a></li>
-            <li> <a href="insereaza_detinut.php">Insereaza detinut </a></li>
+            <li> <a href="sterge_detinuti_admin.php">Sterge detinut</a></li>
+            <li> <a href="insereaza_detinuti_admin.php.php">Insereaza detinut </a></li>
         </ul>
     </li>
-    <li class="nav-item"><a href="date.php">Statistici</a></li>
-    <li class="nav-item"><a href="vizualizare_vizite.php">Lista Vizitelor</a></li>
-     <li class="nav-item"><a href="login.php">Log out</a></li>
+        <li class="nav-item"><a href="vizualizare_vizite.php">Lista Vizitelor</a></li>
+     <li class="nav-item"><a href="index.php">Log out</a></li>
 </ul>
 
 <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -32,10 +31,10 @@
 <?php
 
 session_start();
-function get_imput_admin($nume = '', $prenume = '', $nrDosar = '', $sPedeapsa = '' , $pedeapsa ='' ,$data_nastere='')
+function get_imput_admin($nume = '', $prenume = '', $nrDosar = '', $sPedeapsa = '', $pedeapsa = '', $data_nastere = '')
 {
     echo <<<END
-  <form action="insereaza_detinut.php" method="post">
+ <form action="insereaza_detinut.php" method="post">
  
   <div><p><label for="nume">Nume detinut:</label>
      <input type="text" name="nume" value="$nume"></p><div>
@@ -80,6 +79,11 @@ function get_imput_admin($nume = '', $prenume = '', $nrDosar = '', $sPedeapsa = 
   </p>
 END;
 }
+if (!isset($_REQUEST['nume']))
+{
+    get_imput_admin();
+}
+?>
 </div>
 </body>
 </html>
