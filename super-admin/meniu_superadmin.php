@@ -16,8 +16,7 @@
             <li> <a href="insereaza_detinut.php">Insereaza detinut </a></li>
         </ul>
     </li>
-    <li class="nav-item"><a href="insereaza_institutie.php">Statistici</a></li>
-    <li class="nav-item"><a href="vizualizare_vizite.php">Lista Vizitelor</a></li>
+	<li class="nav-item"><a href="insereaza_institutie.php">Statistici</a></li>
     <li class="nav-item"><a href="vizualizare-poze.php">Vizualizare poze</a></li>
      <li class="nav-item"><a href="login.php">Log out</a></li>
 </ul>
