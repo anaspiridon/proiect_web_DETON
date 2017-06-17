@@ -83,6 +83,13 @@ if (!isset($_REQUEST['nume']))
 {
     get_imput_admin();
 }
+  elseif (empty($_REQUEST['nume']) or empty($_REQUEST['prenume']) or empty($_REQUEST['nrDosar']) or empty($_REQUEST['sPedeapsa']) or empty($_REQUEST['pedeapsa'])) 
+{
+    echo '<script language="javascript">';
+    echo 'alert("Pentru adaugarea unui nou detinut este necesara completarea tuturor spatilor")';
+    echo '</script>';
+    get_imput_admin();
+}
 ?>
 </div>
 </body>
