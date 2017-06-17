@@ -11,24 +11,22 @@ $end_year   = 2018; // Ending year for dropdown list box
 <title>DETON</title>
 </head>
 <body>
-
-<ul class="navigation">
-    <li class="nav-item"><a href="#">Acasa</a></li>
- 
-  
-    <li class="nav-item"><a href="#">Contact</a></li>
-   <li class="nav-item"><a href="program_online.php">Programare online</a></li>
-        <li class="nav-item"><a href="#">Acces penitenciar <span class="sub-navigation"></span></span></a>
-        <ul>
-
-            <li> <a href="obiecte_permise.php">Obiecte permise la vizita</a></li>
-            <li> <a href="obiecte_nepermise.php">Obiecte nepermise la vizita </a></li>
-        </ul>
-        <li class="nav-item"><a href="login.php">Log out</a></li>
-    </li>
- 
     
+<ul class="navigation">
+    <li class="nav-item"><a href="meniu_superadmin.php">Acasa</a></li>
+	  <li class="nav-item"><a href="vizualizare_detinuti.php">Lista detinuti</a></li>
+    <li class="nav-item"><a href="#">Optiuni detinuti <span class="sub-navigation"></span></span></a>
+        <ul> 
+            <li> <a href="sterge_detinuti.php">Sterge detinut</a></li>
+            <li> <a href="insereaza_detinut.php">Insereaza detinut </a></li>
+        </ul>
+    </li>
+    <li class="nav-item"><a href="insereaza_institutie.php">Statistici</a></li>
+    <li class="nav-item"><a href="vizualizare_vizite.php">Lista Vizitelor</a></li>
+    <li class="nav-item"><a href="vizualizare-poze.php">Vizualizare poze</a></li>
+     <li class="nav-item"><a href="login.php">Log out</a></li>
 </ul>
+
 
 <input type="checkbox" id="nav-trigger" class="nav-trigger" />
 <label for="nav-trigger"></label>
