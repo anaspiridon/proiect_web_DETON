@@ -46,3 +46,34 @@ echo <<<END
   </div>
 END;
 }
+if(!isset($_REQUEST['nume']) and !isset($_REQUEST['idDetinut']))
+{ 
+  echo "<p>Introduceti numele si id-ul detinutului pe care doriti sa il stergeti!<p>";
+  get_imput();
+  $conn = oci_connect("Student","STUDENT", "localhost");
+  $id_inst=$_SESSION['id_institutie'];
+  $stid = oci_parse($conn, 'SELECT ID_DETINUT, NUME, PRENUME,NR_DOSAR,START_PEDEAPSA,ID_INSTITUTIE FROM DETINUTI where id_institutie= :bind1 order by ID_DETINUT');
+    oci_bind_by_name($stid,'bind1',$id_inst);
+    oci_execute($stid);
+
+    echo "<table DETINUTI>";
+    echo  "<tr><th>ID_DETINUT</th><th>NUME</th><th>PRENUME</th><th>NR_DOSAR</th><th>ID_INSTITUTIE</th><th>START_PEDEAPSA</th></tr>";
+    ?>
+    <?php
+    while (($row = oci_fetch_assoc($stid)) != false) {
+    ?>
+       <tr><td> <?php echo $row['ID_DETINUT']; ?> </td> 
+       <td> <?php  echo $row['NUME']; ?> </td>
+       <td> <?php echo $row['PRENUME'] ; ?> </td>
+       <td> <?php echo $row['NR_DOSAR'] ; ?> </td>     
+       <td> <?php echo $row['ID_INSTITUTIE'] ; ?> </td> 
+       <td> <?php echo $row['START_PEDEAPSA'] ; ?> </td>  
+
+    <?php } ?>
+
+    <?php
+    echo "</table>";
+}
+ </div>
+</body>
+</html>
