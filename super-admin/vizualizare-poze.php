@@ -1,9 +1,3 @@
-<?Php
-$start_year = 2017; // Starting year for dropdown list box
-$end_year   = 2018; // Ending year for dropdown list box
-
-?>
-
 <!doctype html public >
 <html>
 <link href="calendar.css" type="text/css" rel="stylesheet">
