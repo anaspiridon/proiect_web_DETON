@@ -38,8 +38,6 @@ session_start();
  <h3>
  Sunteti un super-admin si puteti viziona si gestiona datele din toate institutiile!.
  </h3>
- <p><a href="linii.php">Distributia detinutilor pe tipuri de unitati</a>
-<p><a href="distributie pe pedepse.php">Distributia detinutilor pe tipul de condamnare</a>
 
 </div>
 </body>
