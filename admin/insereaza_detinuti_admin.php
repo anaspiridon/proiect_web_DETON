@@ -90,6 +90,90 @@ if (!isset($_REQUEST['nume']))
     echo '</script>';
     get_imput_admin();
 }
+   else 
+ {
+    get_imput_admin();
+
+          $conn         = oci_connect("Student", "STUDENT", "localhost");
+          $nume         = $_REQUEST['nume'];
+          $prenume      = $_REQUEST['prenume'];
+          $nrDosar      = $_REQUEST['nrDosar'];
+          $sPedeapsa    = $_REQUEST['sPedeapsa'];
+          $gen          = $_REQUEST['gen'];
+          $pedeapsa     = $_REQUEST['pedeapsa'];
+          $data_nastere = $_REQUEST['data_nastere'];
+          $idInstitutie = $_SESSION['id_institutie'];
+
+
+  
+          $sql2         = "SELECT * FROM (SELECT ID_detinut FROM detinuti  WHERE ROWNUM <= (select count(*) from detinuti ) ORDER BY ROWNUM DESC) WHERE ROWNUM < 2";
+          $stmt         = oci_parse($conn, $sql2);
+          if (!$stmt) 
+          {
+            echo "An error occurred in parsing the sql string.\n";
+            exit;
+          }
+      
+          oci_execute($stmt);
+          if (oci_fetch($stmt)) 
+          {
+           $id = ociresult($stmt, 1);
+          }
+          else 
+           {
+            echo "An error occurred in retrieving book id.\n";
+            exit;
+           }
+      
+          $id_detinut = $id + 1;
+          $sPedeapsa = date("Y-m-d",strtotime(@$_REQUEST['sPedeapsa']));
+          $sPedeapsa="'".$sPedeapsa."'";
+          $data_nastere = date("Y-m-d", strtotime(@$_REQUEST['data_nastere']));
+          $data_nastere="'".$data_nastere."'";
+          echo $pedeapsa;
+          $sql        = "INSERT INTO detinuti (ID_DETINUT,NUME,PRENUME,NR_DOSAR, GEN, ID_INSTITUTIE,START_PEDEAPSA, ID_PEDEAPSA, ADR_POZA, DATA_NASTERE, COMPORTAMENT_EXEMPLAR ) VALUES (:bind7, :bind1, :bind2, :bind3, :bind4, :bind5, date $sPedeapsa , :bind6, 'lalala', date $data_nastere, 1)";
+          $sql2       = oci_parse($conn, $sql);
+          if(!$sql2)
+          {
+              echo "something wrong";
+          }
+
+          oci_bind_by_name($sql2, ":bind1", $nume);
+          oci_bind_by_name($sql2, ":bind2", $prenume);
+          oci_bind_by_name($sql2, ":bind3", $nrDosar);
+          oci_bind_by_name($sql2, ":bind5", $idInstitutie);
+          oci_bind_by_name($sql2, ":bind4", $gen);
+          oci_bind_by_name($sql2, ":bind7", $id_detinut);
+          oci_bind_by_name($sql2, ":bind6", $pedeapsa);
+
+
+
+          $r = oci_execute($sql2, OCI_NO_AUTO_COMMIT);
+          if (!$r) 
+          {
+            $e = oci_error($sql2);
+            oci_rollback($conn);
+            trigger_error(htmlentities($e['message']), E_USER_ERROR);
+          }
+      
+          if (!$r) 
+          {
+            $e = oci_error($result);
+            trigger_error(htmlentities($e['message']), E_USER_ERROR);
+          }
+      
+          $r = oci_commit($conn);
+          if (!$r) 
+          {
+            $e = oci_error($conn);
+            trigger_error(htmlentities($e['message']), E_USER_ERROR);
+          } 
+          else 
+          {
+            echo "<p>Felicitari! Ati inserat cu succes! </p> <h3> Multumim! ";
+          }
+ }     
+?>
 ?>
 </div>
 </body>
