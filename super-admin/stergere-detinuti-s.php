@@ -122,10 +122,11 @@ function pagination($query,$per_page=15,$page=1,$url='?'){
         </ul>
     </li>
     <li class="nav-item"><a href="insereaza_institutie.php">Statistici</a></li>
-    <li class="nav-item"><a href="vizualizare_vizite.php">Lista Vizitelor</a></li>
+
     <li class="nav-item"><a href="vizualizare-poze.php">Vizualizare poze</a></li>
      <li class="nav-item"><a href="login.php">Log out</a></li>
 </ul>
+
 
 <input type="checkbox" id="nav-trigger" class="nav-trigger" />
 <label for="nav-trigger"></label>
