@@ -1,0 +1,225 @@
+
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+input[type=text] {
+	padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border:  2px solid #FF6600;
+    border-radius: 4px;
+	font-family: "Lucida Console", Monaco, monospace;
+    font-size: 12px;
+}
+
+input[type=password] {
+	padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border:  2px solid #FF6600;
+    border-radius: 4px;
+	font-family: "Lucida Console", Monaco, monospace;
+    font-size: 12px;
+}
+
+input[type=file] {
+	padding: 10px 15px;
+    margin: -2px ;
+    border:  2px solid #FF6600;
+    border-radius: 4px;
+	font-family: "Lucida Console", Monaco, monospace;
+    font-size: 9px;
+}
+
+input[type=email] {
+	padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border:  2px solid #FF6600;
+    border-radius: 4px;
+	font-family: "Lucida Console", Monaco, monospace;
+    font-size: 12px;
+}
+
+input[type=date] {
+	padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border:  2px solid #FF6600;
+    border-radius: 4px;
+	font-family: "Lucida Console", Monaco, monospace;
+    font-size: 12px;
+}
+
+input[type=radio] {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-10px 10px 0 0;
+    vertical-align:middle;
+    background:url('acasa.jpg') -38px top no-repeat;
+    cursor:pointer;
+}
+
+label {
+  font-family: "Impact", Charcoal, sans-serif;
+  font-size: 20px;
+}
+
+select {
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: 2px solid #FF6600;
+	font-family: "Lucida Console", Monaco, monospace;
+    font-size: 12px;
+}
+
+
+.button {
+    background-color: black;
+    color: black;
+    border: 2px solid #FF6600;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+	font-family: "Lucida Console", Monaco, monospace;
+	color: white;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#myBtn{
+    background-color: black;
+    color: black;
+    border: 2px solid #FF6600;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+	font-family: "Lucida Console", Monaco, monospace;
+	color: white;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+body  {
+    background-image: url('img7.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+}
+
+@media only screen and (min-device-width: 400px) {
+    body { 
+        background-image: url('img4.jpg'); 
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+    }
+}
+
+
+h1 {
+    color:  #FF6600;
+    text-align: right-side;
+	font-family:"Arial Black", Gadget, sans-serif;
+    font-size: 70px;
+	padding: 5px ;
+}
+
+
+p {
+	color:  white;
+	font-family: "Lucida Console", Monaco, monospace;
+    font-size: 25px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+	
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: white;
+    background-image: url('modal.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;	
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
